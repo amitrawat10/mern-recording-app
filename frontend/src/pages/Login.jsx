@@ -102,7 +102,11 @@ const Login = () => {
         />
         {emailError && <span className="input-error">{emailError}</span>}
 
-        <button type="submit" className="submit-btn">
+        <button
+          type="submit"
+          className={`submit-btn ${btnValue !== "Login" ? "disabled" : ""}`}
+          disabled={btnValue !== "Login" ? true : false}
+        >
           {btnValue}
         </button>
         {error && <span className="name-error">{error}</span>}

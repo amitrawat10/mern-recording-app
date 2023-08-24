@@ -136,6 +136,11 @@ input:focus {
   background-color: rgb(196, 92, 52);
 }
 
+.disabled {
+  cursor: not-allowed;
+  background-color: #595959;
+}
+
 @media (max-width: 600px) {
   .container {
     align-items: end
