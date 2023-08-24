@@ -44,6 +44,10 @@ const Home = () => {
           screenMediaStream.getTracks().forEach((track) => track.stop());
         if (webcamMediaStream)
           webcamMediaStream.getTracks().forEach((track) => track.stop());
+        setScreenMediaStream(null);
+        setWebcamMediaStream(null);
+        screenRef.current = null;
+        videoRef.current = null;
       } finally {
         if (!isPermissionDenied) setIsPermissionGiven(true);
       }
