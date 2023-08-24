@@ -40,6 +40,10 @@ const Home = () => {
       } catch (error) {
         console.log(error);
         setIsPermissionDenied(true);
+        if (screenMediaStream)
+          screenMediaStream.getTracks().forEach((track) => track.stop());
+        if (webcamMediaStream)
+          webcamMediaStream.getTracks().forEach((track) => track.stop());
       } finally {
         if (!isPermissionDenied) setIsPermissionGiven(true);
       }
