@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(17, 16, 16);
+  color: #fff;
+  user-select: none;
+}
+
+.heading {
+  color: #ccc;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 1200px;
+  max-width: 90%;
+  justify-content: center;
+}
+
+.record-btn {
+  width: 15rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.video-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 1.8rem;
+}
+
+.video-container button {
+  margin-bottom: 1.4rem;
+}
+
+.video-container video {
+  width: 50%;
+  flex-wrap: wrap;
+  height: 400px;
+  object-fit: cover;
+}
+
+.input-error {
+  color: rgb(255, 114, 114);
+  font-size: .80rem;
+  align-self: left;
+  margin-right: auto;
+}
+
+.perm {
+  color: rgb(255, 114, 114);
+}
+
+.submit-form {
+  display: flex;
+  flex-direction: column;
+  height: 15rem;
+  width: 20rem;
+}
+
+.input {
+  font-size: 1.1rem;
+  padding: .66rem .40rem;
+  background: transparent;
+  color: #ccc;
+  outline: none;
+  border: none;
+  border: 1px solid #aaa;
+  margin-top: 1rem;
+}
+
+input:focus {
+  border: 1px solid transparent;
+  outline: 1px solid rgb(0, 174, 255);
+}
+
+.submit-btn {
+  padding: .77rem;
+  outline: none;
+  cursor: pointer;
+  background-color: rgb(0, 174, 255);
+  font-size: 1.2rem;
+  font-weight: bolder;
+  margin-top: 1.3rem;
+  border: none;
+  border-radius: 2px;
+}
+
+.submit-btn:hover {
+  background-color: rgb(0, 144, 210);
+}
+
+.border-red {
+  outline: 1px solid rgb(255, 114, 114);
+  border: 1px solid transparent;
+}
+
+
+.record-btn {
+  font-weight: bold;
+  outline: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 1rem 1.8rem;
+}
+
+.start {
+  background-color: rgb(79, 244, 189);
+}
+
+.start:hover {
+  background-color: rgb(54, 195, 148);
+}
+
+.stop {
+  background-color: rgb(255, 130, 81);
+}
+
+.stop:hover {
+  background-color: rgb(196, 92, 52);
+}
+
+@media (max-width: 600px) {
+  .container {
+    align-items: end
+  }
+
+  .video-container {
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+  }
+
+  .video-container video {
+    height: 60%;
+    width: 90%;
+  }
+}
